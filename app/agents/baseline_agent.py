@@ -90,7 +90,7 @@ async def browser_executor(state: AgentState) -> AgentState:
 
     async with async_playwright() as p:
         # browser = await p.chromium.launch(headless=False, slow_mo=1000)
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=True, slow_mo=1000)
         page = await browser.new_page()
 
         try:
